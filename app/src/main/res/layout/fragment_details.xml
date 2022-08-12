@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#15083C"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".details.DetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/framelayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/ll_ratings"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ic_detailsImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="430dp"
+                    android:contentDescription="di"
+                    android:scaleType="fitXY"
+                    tools:src="@tools:sample/backgrounds/scenic" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.6"
+                    android:background="@drawable/black_details"
+                    android:scaleY="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="180dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.3"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_details_small_poster"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:layout_gravity="bottom|left"
+                            android:elevation="6dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/black_details" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:layout_margin="7dp"
+                        android:layout_weight="0.7"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/detailsTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|right"
+                            android:fontFamily="@font/wght"
+                            android:textStyle="italic"
+                            android:lineSpacingExtra="3sp"
+                            android:maxLines="4"
+                            android:padding="5dp"
+                            android:text="Film"
+                            android:textColor="#FFEFEF"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            android:id="@+id/tv_genre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:ellipsize="end"
+                            android:padding="5dp"
+                            android:text="..."
+                            android:textColor="#709AB6"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_language"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="..."
+                            android:textColor="#709AB6"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_moredetails"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ic_baseline_share_24"
+                    android:backgroundTint="#E8E3E3"
+                    android:fontFamily="@font/grapenutsregular"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF">
+
+                </Button>
+
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_ratings"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="1"
+                app:layout_constraintBottom_toTopOf="@+id/ll_plot"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/framelayout">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.33333"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#7B202C38"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="IMDb"
+                        android:textColor="#EBECE7" />
+
+                    <TextView
+                        android:id="@+id/tv_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:fontFamily="@font/montserrat"
+                        android:text=""
+                        android:textColor="#E1C60B"
+                        android:textSize="28sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.33333"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|fill_horizontal"
+                        android:background="#7B202C38"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="Dil"
+                        android:textColor="#FFFF" />
+
+                    <TextView
+                        android:id="@+id/tv_detailslanguage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat"
+                        android:paddingLeft="15dp"
+                        android:text=""
+                        android:textColor="#E1C60B"
+                        android:textSize="28sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.33333"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#7B202C38"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center"
+                        android:text="Yayın Tarihi"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/tv_year2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat"
+                        android:paddingLeft="10dp"
+                        android:text=""
+                        android:textColor="#E1C60B"
+                        android:textSize="19sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_plot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_ratings">
+
+                <TextView
+                    android:id="@+id/tv_plot_string"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#7B202C38"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="Film Detay"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_overview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:lineSpacingExtra="3sp"
+                    android:padding="10dp"
+                    android:text="..."
+                    android:textColor="#FFEFEF"
+                    android:textSize="18sp" />
+
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

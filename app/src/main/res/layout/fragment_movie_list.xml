@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".singleList.MovieListFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/tv_topheadlines"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="10dp"
+        android:text="Filmler"
+        android:textColor="#7C4DFF"
+        android:fontFamily="@font/grapenutsregular"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tool_bar">
+
+    </TextView>
+    <Button
+        android:id="@+id/home_button"
+        android:layout_width="133.33dp"
+        android:layout_height="50dp"
+        android:text="Anasayfa"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:background="@color/black"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <Button
+        android:id="@+id/contact_button"
+        android:layout_width="133.33dp"
+        android:layout_height="50dp"
+        android:text="İletişim"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/home_button"
+        app:layout_constraintLeft_toRightOf="@id/home_button"
+        app:layout_constraintTop_toTopOf="@id/home_button"
+        />
+    <Button
+        android:id="@+id/exit_button"
+        android:layout_width="133.33dp"
+        android:layout_height="50dp"
+        android:text="Çıkış Yap"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/contact_button"
+        app:layout_constraintLeft_toRightOf="@id/contact_button"
+        app:layout_constraintTop_toTopOf="@id/contact_button"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_topheadlines" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
