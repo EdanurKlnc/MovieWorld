@@ -1,0 +1,2 @@
+# MovieWorld
+MovieWorld projesi Android Studio ortamında geliştirilmiş mobil uygulamadır. Projenin amacı piyasadaki filmlerin bilgilerini barındırmaktır. Filmin imdb puanı, içeriği, oyuncu kadrosu, yönetmeni gibi çeşitli bilgileri barındırmakta , kullanıcı filme ait daha detaylı bilgi edinmek için detay kısmına tıklanarak başka sayfada bu bilgilere erişebilmektedir. Proje geliştirilirken film bilgilerine API kullanarak erişilmiştir.MVVM mimarisi kullanılmıştır.
